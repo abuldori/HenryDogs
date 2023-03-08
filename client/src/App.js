@@ -5,7 +5,7 @@ import LandingPage from './components/LandingPage/Landing';
 import DogDetail from './components/DogDetail/DogDetail';
 import DogCreate from "./components/DogCreate/DogCreate"
 import axios from "axios"
-axios.defaults.baseURL = `https://deploy-production-208a.up.railway.app/`
+axios.defaults.baseURL = 'https://deploy-production-208a.up.railway.app/';
 
 function App () {
 
