@@ -1,0 +1,9 @@
+*{
+  margin: .1%;
+  padding: 0.3%;
+  box-sizing: border-box;
+ }
+
+.App {
+  text-align: center;
+}

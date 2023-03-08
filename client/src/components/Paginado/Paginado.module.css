@@ -1,0 +1,10 @@
+.pag{
+    display: inline-block;
+    margin: 8px;
+}
+.lis{
+    display: inline-block;
+    border-radius: 5px;
+    padding: 2px 7px;
+}
+  

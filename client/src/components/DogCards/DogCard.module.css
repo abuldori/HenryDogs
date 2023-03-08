@@ -1,0 +1,47 @@
+.contenedorPadre {
+    width: 320px;
+    max-width: 1200px;
+    display: flex;
+  }
+  
+
+  .contenedor {
+    width: 300px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px rgba(rgb(235, 231, 231), rgb(214, 218, 214), rgb(163, 163, 212), alpha);
+    overflow: 200px;
+    text-align: center;
+    transition: all 0.25s;
+    padding-top: 5%;
+    display: flex;
+    display: inline-block;
+
+  }
+  
+  .contenedor:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .image {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+  }
+  
+  .div {
+    height: 200px;
+    width: 300px;
+    margin: 0px;
+  }
+  
+  .label {
+    font-weight: 600;
+  }
+  
+  .p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+  }
