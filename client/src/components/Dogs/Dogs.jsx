@@ -18,6 +18,7 @@ const Dogs = () => {
     const indexOfLastDog = currentPage * dogsPerPage // 8
     const indexOfFirstDog = indexOfLastDog - dogsPerPage // 0
     const currentDogs = allDogs.slice(indexOfFirstDog, indexOfLastDog)
+
     
     
     const paginado = (pageNumber) => {

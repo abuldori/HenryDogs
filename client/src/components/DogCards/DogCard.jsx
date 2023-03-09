@@ -3,22 +3,15 @@ import React from "react";
 import {Link} from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { deletedDogs, getDogs } from "../../redux/actions";
-import { useEffect } from "react";
+
 
 let DogCard = ( {id, name, image, temperaments, weight, createInDb }) => {
     const dispatch = useDispatch();
-
-    const handleDogClick = (e) => {
-        e.preventDefault()
-        dispatch(getDogs())
-    }
-
-    useEffect(() => {
-      dispatch(deletedDogs())
-  },[dispatch])
+   
 
     const handleDeleteDog = (id) => {
-        dispatch(deletedDogs(id))   
+        dispatch(deletedDogs(id))
+        .then(() => getDogs() )  
       }
       
     return (
