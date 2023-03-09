@@ -15,3 +15,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+body {
+  font-size: 16px;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Estilos para pantallas medianas */
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+}
