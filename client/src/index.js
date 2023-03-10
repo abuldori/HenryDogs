@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import axios from "axios"
 axios.defaults.baseURL = 'https://deploy-production-275f.up.railway.app/';
 
+
 ReactDOM.render(
     <Provider store={store}>  
   <BrowserRouter>

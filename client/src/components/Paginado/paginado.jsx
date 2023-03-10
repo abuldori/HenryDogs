@@ -20,18 +20,18 @@ const Paginado = ({dogsPerPage, allDogs, paginado, currentPage}) => {
     };
 
     return(
-        <nav className={style.pag}>
-            <ul>
-                <li className={style.lis}>
-                    <button onClick={previusPage}>Prev</button>
+        <nav className={style.pagination}>
+            <ul className={style.ul}>
+                <li className={style.li}>
+                    <button className={style.prev} onClick={previusPage}>Prev</button>
                 </li>
                     { pageNumbers?.map(number => (
-                <li  className={style.lis} key={number}>
-                        <button onClick={() => paginado(number)}>{number}</button>
+                <li className={style.li} key={number}>
+                        <button className={style.paginationbutton} onClick={() => paginado(number)}>{number}</button>
                 </li>
                 ))}
-                <li className={style.lis}>
-                    <button onClick={nextPage}>Next</button>
+                <li className={style.li}>
+                    <button className={style.next} onClick={nextPage}>Next</button>
                 </li>
             </ul>
         </nav>

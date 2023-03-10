@@ -1,58 +1,15 @@
-.nef {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-
 .dogscontenedorprincipal{
   display: flex;
   justify-content: space-evenly;
 }
 
-.paginado {
-    display:inline-block;
-    background-color: #f0f0f0;
-    
-  }
-  .paginado button {
-    background-color: #b9a7a7;
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
-
-.h1 {
-  padding: 0% 30% ;
-  text-shadow: 3px 3px 1px rgb(1, 5, 8);
-  color: rgb(119, 146, 236);
-  font-family: 'Montserrat', sans-serif;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 5%;
-  margin-top: 2%;
-  font-size: 50px;
-  text-align: center;
- 
-  
-}
-.dog-animation {
-  display:inline-block;
-  animation: dog 2s infinite;
-}
-
-@keyframes dog {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(20px) rotateZ(-10deg);
-  }
-  100% {
-    transform: translateX(0);
+@media (max-width: 767px) {
+.dogscontenedorprincipal{
+  justify-items:center;
+  display: flex;
+  flex-direction: column;
   }
 }
-
 .selec {
     padding: 10 16px;
     margin-top: 10;
@@ -84,36 +41,131 @@
   
   .selec:active {
     box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-      0 8px 10px 1px rgba(0, 0, 0, 0.14),
-      0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12);
     background-color: #61b4b3;
   }
 
+  @media (max-width: 767px) {
+    .selec {
+      font-size: 11px;
+      font: optional;
+      margin-left: 10px;
+      margin-top: 10px;
+      margin-right: 10px;
+      padding: 1% 5% 0%;
+    }
+  }
 
   .conteinerNav{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin-left: 1px;
+    margin-right: 1px;
+    background-position: center;
+    padding: 2% 10% 2%;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-image: url("https://img.freepik.com/vector-gratis/fondo-colorido-modelo-huellas-pata-perro-o-gato_1017-30662.jpg");
   }
+
+  @media (max-width: 767px) {
+    .conteinerNav {
+      padding: 10% 10% 10%;
+      justify-content: center;
+      border-radius: 15px;
+      background-repeat: no-repeat;
+      background-image: url("https://img.freepik.com/vector-gratis/fondo-colorido-modelo-huellas-pata-perro-o-gato_1017-30662.jpg");
+    }
+  }
+
   .nav{
-    color: rgb(21, 20, 20);
-    font-weight: 300;
-    text-decoration: none;
-    margin-right: 15px;
-    font-weight: 500;
-    margin-left: 5%;
-    margin-right: 5%;
-    display: inline-block;
-    font-size: 150%;
-    cursor: pointer;
-    transform: scale(1);
-    color: #0029e0b2;
-    text-shadow: 0 0 .2rem rgba(10, 3, 49, 0.461), 0 0 .1rem rgba(151, 90, 230, 0.461), 0 0 .8rem rgba(0, 0, 0, 0.461);
-  }
-  .nav:hover {
-    text-decoration: underline;
-  }
+  text-decoration: none;
+  padding: 0 15px;
+  display: inline-block;
+  transform: scale(1);
+  color: #03103fb2;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 30px;
+  text-shadow: 0 0 .2rem rgba(10, 3, 49, 0.461), 0 0 .1rem rgba(151, 90, 230, 0.461), 0 0 .8rem rgba(0, 0, 0, 0.461);
+  transition: text-shadow 0.2s ease-in-out;
+}
 
-
-
-
+.nav:hover {
+  text-decoration: none;
+  text-shadow: 0 0 .2rem rgba(22, 18, 45, 0.461), 0 0 .1rem rgba(151, 90, 230, 0.461), 0 0 2rem rgba(12, 0, 0, 0.461);
+  color: #ed126d;
   
+}
+  
+  @media (max-width: 767px) {
+    .nav {
+      font-size: 30px;
+      margin-left: 8px;
+    }
+  }
+
+  .nef {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 10% 10%;
+  }
+   
+  @media (max-width: 767px) {
+    .nef {
+      font-size: 50px;
+      margin-right: 5px;
+      margin-top: 5px;
+      margin-bottom: auto;
+      padding: 5% 1% 5%;
+    }
+  }
+
+.paginado {
+    background-color:transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+  }
+  .paginado button {
+    background-color: #bfb7b7;
+    border: .1rem solid #d7b3b3;
+    padding: 3px 6px 6px;
+  }
+
+
+
+.h1 {
+  padding: 0% 30% ;
+  text-shadow: 3px 3px 1px rgb(1, 5, 8);
+  color: rgb(119, 146, 236);
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  margin-top: 2%;
+  font-size: 50px;
+  text-align: center;
+ 
+}
+.dog-animation {
+  display:inline-block;
+  animation: dog 2s infinite;
+}
+
+@keyframes dog {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px) rotateZ(-10deg);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+

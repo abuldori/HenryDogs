@@ -25,7 +25,7 @@ const SearchBar = ({setCurrentPage}) => {
             <div className={style.centrar1}>
             <input className={style.input}
                 type = "text"
-                placeholder="Buscar..."
+                placeholder="Buscar por nombre..."
 
                 onChange={handleInputChange}
                 />

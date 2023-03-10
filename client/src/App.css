@@ -1,9 +1,31 @@
 *{
-  margin: .1%;
-  padding: 0.3%;
+
   box-sizing: border-box;
  }
 
 .App {
   text-align: center;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 745px) {
+  .App {
+    font-size: 14px;
+  }
+}
+
+/* Estilos para pantallas medianas */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .App {
+    font-size: 16px;
+  }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 1024px) {
+  .App {
+    font-size: 18px;
+  }
+
+
 }

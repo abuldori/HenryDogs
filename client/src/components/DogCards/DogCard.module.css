@@ -3,7 +3,13 @@
     max-width: 1200px;
     display: flex;
   }
-  
+
+  @media (max-width: 745px) {
+    .contenedorPadre {
+      font-size: 14px;
+      margin-left: 10px;
+    }
+  }
 
   .contenedor {
     width: 300px;
@@ -22,6 +28,13 @@
   .contenedor:hover {
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 745px) {
+    .contenedor {
+      font-size: 14px;
+      margin-left: 10px;
+    }
   }
   
   .image {

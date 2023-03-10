@@ -14,14 +14,15 @@
     background-blend-mode:multiply;
     
 }
+
+
 .h1{
-    padding: 0%;
+    padding: 0% 0% 16% 0%;
     text-shadow: 3px 3px 1px rgb(41, 145, 224);
     font-family: Verdana;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 5%;
-    margin-top: 0%;
+    margin-bottom: 0%;
     font-size: 50px;
     text-align:center;   
     animation: blink 5s infinite;
@@ -59,7 +60,7 @@
     font-family: cursive;
     color: #fafafa;
     font-size: 20px;
-    padding: 19px;
+    padding: 5px;
     width: 60%;
     
     text-decoration: none;
@@ -80,5 +81,24 @@
     background-image: -o-linear-gradient(top, #2079b0, #eb94d0);
     background-image: linear-gradient(to bottom, #2079b0, #eb94d0);
     text-decoration: none;
+  }
+
+  @media (max-width: 767px) {
+    .container {
+      font-size: 20px;
+      margin: 0%;
+      padding: 30% 0% 50% 0%;
+    }
+    .h1 {
+      font-size: 40px;
+      margin: 5% 10%;
+    }
+    .h3 {
+      font-size: 20px;
+      margin: 10% 5%;
+    }
+    .btn {
+      width: 70%;
+    }
   }
  

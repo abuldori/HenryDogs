@@ -94,7 +94,7 @@ const Dogs = () => {
                 </select>
 
                 <select className={style.selec} value="" onChange={e => handleFilterCreated(e)}>
-                <option value="" disabled >Filtrar</option>
+                <option value="" disabled >Creado/ Exitente</option>
                     <option value="created">Creado</option>
                     <option value="api">Existente</option>
                 </select>
@@ -106,13 +106,13 @@ const Dogs = () => {
             </div>
                 <SearchBar setCurrentPage={setCurrentPage}/>
                 <div className={style.conteinerNav}>
-                     <Link to='/dog'className={style.nav} >Crea tu Perro🐾</Link>
+                     <Link to='/dog'className={style.nav} >Crea tu Perro</Link>
                 </div>
             
             <div className={style.nef}>
 
         {currentDogs?.map(({id, name, temperaments, weight, image, createInDb}) => {         
-            return <div className={style.div} key={id}>
+            return <div key={id}>
                  <DogCard
                    key={id}
                    id={id}
