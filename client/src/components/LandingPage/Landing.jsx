@@ -3,15 +3,15 @@ import style from "./Landing.module.css"
 
 const LandingPage = () => {
     return(
-        <div className={style.doganimation}> 
+        <div className={style.containerlanding}> 
 
-        <div className={style.container}>
+        <div className={style.containerApp}>
             <h1 className={style.h1}>Una aplicación de Perros</h1>
+        </div>
 
-            <h3 className={style.h3}></h3>
-
+         <div className={style.containerAp}>
             <button className={style.btn}>
-                <Link to='/home'>Traer perros🐶</Link>
+                <Link className={style.traerperros} to='/home'>Traer perros🐶</Link>
             </button>
         </div>
         </div>

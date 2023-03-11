@@ -1,6 +1,5 @@
 *{
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
     
 }
@@ -18,5 +17,6 @@
 @media (max-width: 767px) {
     .contenedor {
       margin-left: 10px;
+      padding-left: 0% 10px 10px 10px;
     }
   }

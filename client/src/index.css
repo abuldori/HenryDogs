@@ -9,12 +9,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 /* Estilos para pantallas pequeñas */
 @media (max-width: 767px) {
   body {
     font-size: 14px;
+    padding: 10% 30px 100px 30px;
+    overflow-x: hidden;
   }
 }
 
@@ -22,6 +25,7 @@ body {
 @media (min-width: 768px) and (max-width: 1023px) {
   body {
     font-size: 16px;
+    overflow-x: hidden;
   }
 }
 
@@ -29,5 +33,6 @@ body {
 @media (min-width: 1024px) {
   body {
     font-size: 18px;
+    overflow-x: hidden;
   }
 }
