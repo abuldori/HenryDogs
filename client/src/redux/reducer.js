@@ -112,7 +112,6 @@ const reducer = ( state = inicialState, action ) => {
             return {
                 ...state,
                 newDogs: filter,
-               
                 dogs: filter,
                 
            

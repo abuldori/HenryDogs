@@ -12,10 +12,10 @@
   }
 
   .contenedor {
+    box-shadow: 0 2px rgba(rgb(235, 231, 231), rgb(214, 218, 214), rgb(163, 163, 212), alpha);
     width: 300px;
     height: 430px;
     border-radius: 8px;
-    box-shadow: 0 2px rgba(rgb(235, 231, 231), rgb(214, 218, 214), rgb(163, 163, 212), alpha);
     overflow: 200px;
     text-align: center;
     transition: all 0.25s;

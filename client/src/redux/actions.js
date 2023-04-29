@@ -16,12 +16,12 @@ import {
 export const getDogs = () => {
   return async (dispatch) => {
     try {
-      const response = await axios("/dogs");
+      const response = await axios("http://localhost:3001/dogs");
       const data = response.data;
       return dispatch({
         // despacho la action
         type: GET_DOGS,
-        payload: data, // data ->lo que me devuelve la aciton
+        payload: data, // data ->lo que me devuelve la action
       });
     } catch (error) {
       return error.message;
@@ -32,7 +32,7 @@ export const getDogs = () => {
 export const getDogDetail = (id) => {
   return async (dispatch) => {
     try {
-      let response = await axios(`/dogs/${id}`);
+      let response = await axios(`http://localhost:3001/dogs/${id}`);
       return dispatch({ type: DOG_DETAIL, payload: response.data });
     } catch (error) {
       return error.message;
@@ -47,7 +47,7 @@ export const cleanDetail = () => {
 export const getTemperaments = () => {
   return async (dispatch) => {
     try {
-      const response = await axios("/temperaments", {});
+      const response = await axios("http://localhost:3001/temperaments", {});
       const data = response.data;
       return dispatch({
         // despacho la action
@@ -62,7 +62,7 @@ export const getTemperaments = () => {
 
 export const postDog = (payload) => {
   return async (dispatch) => {
-    const response = await axios.post("/dogs", payload);
+    const response = await axios.post("http://localhost:3001/dogs", payload);
     console.log(response);
     // console.log(payload);
     return dispatch({ type: POST_DOG, response });
@@ -89,7 +89,7 @@ export const orderWeight = (payload) => {
 export const searchByRace = (payload) => {
   return async (dispatch) => {
     try {
-      let response = await axios(`/dogs?name=${payload}`);
+      let response = await axios(`http://localhost:3001/dogs?name=${payload}`);
       return dispatch({ type: SEARCH_RACE, payload: response.data });
     } catch (error) {
       alert("No se encontro el nombre");
@@ -99,7 +99,7 @@ export const searchByRace = (payload) => {
 
 export const deletedDogs = (id) => {
     return async (dispatch) => {
-      const { data } = await axios.delete(`/dogs/${id}`);
+      const { data } = await axios.delete(`http://localhost:3001/dogs/${id}`);
 
       return dispatch({
         type: DELETE_DOG,
