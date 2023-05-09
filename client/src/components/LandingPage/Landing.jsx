@@ -1,17 +1,24 @@
 import { Link } from "react-router-dom";
 import style from "./Landing.module.css" 
+import perrito from "../../assets/perrito.png"
 
 const LandingPage = () => {
     return(
-        <div className={style.containerlanding}> 
+        <div> 
 
-        <div className={style.containerApp}>
-            <h1 className={style.h1}>Una aplicación de Perros</h1>
+        <div className={style.contect}>
+            <h1 className={style.title}>Hernry Dogs</h1>
         </div>
 
-         <div className={style.containerAp}>
-            <button className={style.btn}>
-                <Link className={style.traerperros} to='/home'>Traer perros🐶</Link>
+        <div className={style.container}>
+        <div className={style.gifDiv}>
+           <img className={style.gifimg} src={perrito} alt="Descripción del GIF" />
+        </div>
+        </div>
+
+         <div className={style.conteinerbtn}>
+            <button className={style.button}>
+                <Link  to='/home'>Ingresar</Link>
             </button>
         </div>
         </div>

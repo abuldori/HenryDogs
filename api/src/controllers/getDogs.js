@@ -6,8 +6,7 @@ const { Dog, Temperament } = require("../db");
 const getApiInfo = async () => {
   const apiUrl = await axios.get(`https://api.thedogapi.com/v1/breeds`);
   const apiInfo = await apiUrl.data.map((dog) => {
-    let tempArr =[];
-    if (dog.temperament) {tempArr = dog.temperament.split(/(?:,| )+/)}
+    const tempArr = dog.temperament ? dog.temperament.split(/(?:,| )+/) : [];
     return {
       id: dog.id,
       image: dog.image.url,
@@ -39,6 +38,20 @@ const getDbInfo = async () => {
   }));
   return datBmap;
 };
+// const getDbInfo = async () => {
+//   const dogs_DB = await Dog.findAll({
+//     attributes: ["id", "name", "height", "weight", "life_span", "image"],
+//     include: {
+//       model: Temperament,
+//       attributes: ["name"],
+//       through: {
+//         attributes: [],
+//       },
+//     },
+//   });
+//   return dogs_DB;
+// };
+
 
 // TODA LA INFO DE LOS PERROS UNIFICADA
 const getAllDogs = async () => {
@@ -48,29 +61,9 @@ const getAllDogs = async () => {
   return infoUnified;
 };
 
-// ///////////////////////////
-
-// desarma los arreglos de temperamentos y me los devuelve como singulares
-
-const getTemperaments = async () => {
-  const allDogs = await getAllDogs();
-  const temperaments = allDogs.map((e) => e.temperaments).toString(); // los pasa a string
-  const tempSpace = temperaments.split(","); // los separa
-  const temperament = tempSpace.map((temp) => {
-    if (temp[0] === " ") {
-      // saca espacio
-      return temp.trim(); // retorma lo que corresponde sin espacios
-    }
-    return temp;
-  });
-  const allTemperaments = temperament.filter((el) => el !== "");
-  return allTemperaments;
-};
-
 
 module.exports = {
   getAllDogs,
   getDbInfo,
-  getApiInfo,
-  getTemperaments,
+  getApiInfo
 };

@@ -1,31 +1,27 @@
 const validate = (input) => {
-    let errors = {};
+    let errors = {}; 
 
-    if(!/^[a-z ,A-Z.'-]+$/.test(input.name)){
+    if(input.name && !/^[a-z ,A-Z.'-]+$/.test(input.name)){
         errors.name = 'Se requiere Nombre'
     }
-    if(!input.height){
-        errors.height = "se requiere altura min - max"
+    if (input.height && !/^\d{1,3}(\.\d{1,3})?$/.test(input.height)) {
+        errors.height = "Dato obligatorio";
+        //"El formato debe ser: 00 - 00 o 0 - 0 o 00,0 - 00,0 o 0,0 - 0,0";
+      }
+      
+      if (input.weight && !/^\d{1,2}(,\d{1})?(\.\d{1,3})?$/.test(input.weight)) {
+        errors.weight =  "Dato obligatorio";
+      }
+  
+    if(input.life_span && !/^\d{1,2}(\.\d)?\s*(y|años)?\s*-\s*\d{1,2}(\.\d)?\s*(y|años)?$/.test(input.life_span)){
+        errors.life_span = "Edad min - max";
     }
-    if(!/^\d{2} - \d{2}$/.test(input.height)){
-        errors.height = "Formato 00 - 00"
-    }
-    if(!input.weight){
-        errors.weight = "Se requiere peso min - max"
-    }
-    if(!/^\d{2} - \d{2}$/.test(input.weight)){
-        errors.weight = "Formato 00 - 00"
-    }
-    if(!input.life_span){
-        errors.life_span = "Se requiere edad min - max"
-    }
-    if(!/^\d{2} - \d{2}$/.test(input.life_span)){
-        errors.life_span = "Formato 00 - 00"
-    }
-    if(!/^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%.+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%+.~#?&/=]*)(?:\.[a-zA-Z]{2,})?(?:\?[^\s]*)?(?:#[^\s]*)?$/
-    .test(input.image)) {
-        errors.image = "Se requiere URL con HTTPS"
-    }
+    
+      // Validar la URL de imagen
+      if (input.image && !(/^https?:\/\/(?:[a-z0-9-]+\.)+[a-z]{2,}(?:\/[^/]+)*\/?(?:\?.*)?$/i.test(input.image))) {
+        errors.image = "*";
+      }
+
     return errors;
   }
         

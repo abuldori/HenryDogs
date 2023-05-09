@@ -20,7 +20,6 @@ const Dogs = () => {
     const currentDogs = allDogs.slice(indexOfFirstDog, indexOfLastDog)
 
     
-    
     const paginado = (pageNumber) => {
         setCurrentPage(pageNumber)
     }
@@ -65,7 +64,7 @@ const Dogs = () => {
         
         <div className={style.contenedor}>
         
-        <h1 className={style.h1}>PERROS</h1>
+        <h1 className={style.h1}>DOGS APP</h1>
            
             <div className={style.dogscontenedorprincipal}>
 
@@ -74,7 +73,7 @@ const Dogs = () => {
             <option value="All" >Temperamentos</option>
             {temperaments?.map((t) => {
                 return (
-                    <option key={t.id} value={t.name}>
+                    <option className={style.value2} key={t.id} value={t.name}>
                   {t.name}
                 </option>
               );
@@ -83,20 +82,20 @@ const Dogs = () => {
 
                 <select className={style.selec} value="" onChange={e=> handleSortName(e)}>
                     <option value="" disabled >Orden por nombre</option>
-                    <option value="asc">A-Z</option>
-                    <option value="des">Z-A</option>
+                    <option className={style.value2} value="asc">A-Z</option>
+                    <option className={style.value1} value="des">Z-A</option>
                 </select>
 
                 <select className={style.selec} value="" defaultValue={"Default"} onChange={e=> handleSortWeight(e)}>
                     <option value="" disabled>Orden por Peso</option>
-                    <option value="asc">Min</option>
-                    <option value="des">Max</option>
+                    <option className={style.value1} value="asc">Menor a Mayor ASC</option>
+                    <option className={style.value2} value="des">Mayor a Menor DESC</option>
                 </select>
 
                 <select className={style.selec} value="" onChange={e => handleFilterCreated(e)}>
                 <option value="" disabled >Creado/ Exitente</option>
-                    <option value="created">Creado</option>
-                    <option value="api">Existente</option>
+                    <option className={style.value1} value="created">Creado</option>
+                    <option className={style.value2} value="api">Existente</option>
                 </select>
 
                 <button className={style.selec} onClick={handleClick}>

@@ -7,34 +7,31 @@ const routerDogs = Router();
 
 
 routerDogs.get("/", async (req, res) => {
-
-    const { name } = req.query;
-    let allDogs= await getAllDogs(); // llamo a todos los perros
-
-    if (name) { //si hay un nom q me pasan por query
-
-// agarro la const allDogs(q tiene todo) y lo filtro pido que agarre el name,fijat si incluye lo que pase por query(name), y le aplico tolowercase(por las may y minusculas)
-      let dogName = await allDogs.filter((el) =>  
-        el.name.toLowerCase().includes(name.toLowerCase())); // nose pone el === pq asi busca toodoooooo con el includes
-
-      dogName.length  //encontraste algo?
-        ? res.status(200).send(dogName)  // le paso el nombre
-        : res.status(404).send("No existe el perro"); // le envio el mensaje de error
-    } else {
-      res.status(200).send(allDogs); // si no tiene query, envia todos perros
-    }
-  });
-
+  const { name } = req.query;
+  let allDogs = await getAllDogs(); // Obtener todos los perros
+  // Filtrar por nombre si se proporciona el parámetro "name" en la consulta
+  if (name) {
+    allDogs = allDogs.filter((dog) => dog.name.toLowerCase().includes(name.toLowerCase()));
+  }
+  // Comprobar si hay perros después del filtrado
+  if (allDogs.length) {
+    res.status(200).send(allDogs); // Si hay perros, enviar una respuesta con los perros encontrados
+  } else {
+    res.status(404).send("No se encontraron perros"); // Si no hay perros, enviar una respuesta de error
+  }
+});
 
   routerDogs.get("/:id", async (req, res) => { 
     try {
       const { id } = req.params;
-      const dogsTotal = await getAllDogs();
-      if (id) {
-        let dogsId = await dogsTotal.find(el => el.id == id );
-          if(dogsId) res.status(200).json(dogsId)
-          throw new Error("No existe el perro")
-      }
+
+      const dogsAll = await getAllDogs();
+        if (id) {
+          let dogsId = await dogsAll.find(el => el.id == id );
+            if(dogsId) 
+            return res.status(200).json(dogsId)
+            throw new Error("No existe el perro")
+        }
         } catch (error) {
           return {error: error.message}
     }
@@ -59,12 +56,14 @@ routerDogs.get("/", async (req, res) => {
         let temperDb = await Temperament.findAll({ 
           where: { name: temperaments } }); 
           newDog.addTemperament(temperDb)
-          res.status(200).send("Perro creado");
+          return res.status(200).send("Perro creado");
           
       } catch (error) {
-        res.status(404).send({error: error.message})
+        return res.status(404).send({error: error.message})
       }
     })
+
+    
 
     routerDogs.delete('/:id', async (req, res) => {
       const { id } = req.params;
@@ -82,17 +81,5 @@ routerDogs.get("/", async (req, res) => {
   });
 
 
-    //   routerDogs.delete('/:id', async (req, res) => {
-  //     const { id } = req.params;
-   
-  //  const dog = await Dog.findByPk(id);
-
-  //  if(dog) {
-  //   await dog.destroy();
-  //   res.status(200).send("Perro eliminado");
-  //  } else {
-  //   res.status(404).send("No se puede eliminar")
-  //  }
-  // })
  module.exports = routerDogs;
 

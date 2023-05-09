@@ -64,7 +64,6 @@ export const postDog = (payload) => {
   return async (dispatch) => {
     const response = await axios.post("http://localhost:3001/dogs", payload);
     console.log(response);
-    // console.log(payload);
     return dispatch({ type: POST_DOG, response });
   };
 };

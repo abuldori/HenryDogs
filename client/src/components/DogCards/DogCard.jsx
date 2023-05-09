@@ -31,13 +31,15 @@ let DogCard = ( {id, name, image, temperaments, weight, createInDb }) => {
                     
                     <label className={style.label}>Peso min - max</label>  
                         <p className={style.p}>{weight}</p>
+                       
                     {createInDb  && (
-                             <button onClick={() => {
-                                if (window.confirm('¿Está seguro de que desea eliminar este perro?')) {
-                                  handleDeleteDog(id);
-                                }
-                              }}>X</button>
-                          )}    
+                        <button onClick={() => {
+                            if (window.confirm('¿Está seguro de que desea eliminar este perro?')) {
+                                handleDeleteDog(id);
+                            }
+                        }}>X</button>
+                        )}    
+                
                 </div>
             </div>
         </div>

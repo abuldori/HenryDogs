@@ -8,11 +8,8 @@
 
 .input{
     color: black;
-    width: -2rem;
-    margin: .1rem;
-    border-radius: 2rem;
-    min-width: 16rem;
-    max-width: 16rem;
+    margin: 1% 10% 10%;
+    border-radius: 2rem;  
     text-align: center;
     font-size: 1rem;
     font-family: Tahoma;
@@ -20,24 +17,28 @@
 }
 .name{
     font-size: 1.2rem;
+    justify-content: center;
     height: 2rem;
     margin-top: .1rem;
     display: flex;
     margin: 0 auto;
-    overflow: hidden;
+    text-align: center;
     font-family: inherit;
-    border-radius: .5rem; 
+    border-radius: .5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 0px #afa1a1;
 }
 
 .name2{
   color: red;
-  font-size: 1.1rem;
-  height: 2rem;
-  margin-top: .1rem;
-  display: flex;
+  font-size: 1rem;
   justify-content: center;
-  font-family: courier,arial,helvética;
-  flex-direction: column;
+  display: flex;
+  margin-top: -1.5rem;
+  justify-content: center;
+  font-family: cursive;
+  text-shadow: 2px 2px 0px #4e4b4b;
+  
 }
 
 
@@ -79,33 +80,23 @@
 
 .btn2 {
   background-color: #3DD1E7;
-  border: 0 solid #E5E7EB;
+  border: 0 solid #eaedf3;
   box-sizing: border-box;
-  color: #000000;
+  color: #f1ebeb;
   display: flex;
-  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1.75rem;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.5rem;
   padding: .75rem 1.65rem;
-  position: relative;
-  text-align: center;
   text-decoration: none #000000 solid;
-  text-decoration-thickness: auto;
-  width: 100%;
-  max-width: 460px;
-  position: relative;
   cursor: pointer;
   transform: rotate(-2deg);
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  font-weight: bold;
+    text-shadow: 2px 2px 0px #111010;
 }
 
-.btn2:focus {
-  outline: 0;
-}
 
 .btn2:after {
   content: '';
@@ -133,6 +124,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .btnDelete{
@@ -142,8 +134,6 @@
   height: 2rem;
   background: linear-gradient(rgba(34, 31, 129, 0.572), rgba(0, 0, 0, 0));
   border: transparent;
-
-  overflow: hidden;
   transition: 300ms;
 }
 

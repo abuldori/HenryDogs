@@ -6,8 +6,8 @@
 
   @media (max-width: 745px) {
     .contenedorPadre {
-      font-size: 14px;
-      margin-left: 10px;
+      font-size: 10px;
+      margin-left: 12px;
     }
   }
 
@@ -16,12 +16,12 @@
     width: 300px;
     height: 430px;
     border-radius: 8px;
-    overflow: 200px;
+  
     text-align: center;
     transition: all 0.25s;
-    padding-top: 5%;
     display: flex;
     display: inline-block;
+    margin-top: 1rem;
 
   }
   
@@ -34,7 +34,6 @@
     .contenedor {
       font-size: 14px;
       margin-left: 10px;
-      transform: translateY(-15px);
       box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
     }
   }
@@ -43,6 +42,8 @@
     width: 300px;
     height: 200px;
     border-radius: 8px;
+    margin-top: 5%;
+    margin-bottom: 7%;
   }
   
   .div {
@@ -52,11 +53,30 @@
   }
   
   .label {
-    font-weight: 600;
+    font-weight: 900;
+    font-size: 16px;
+    color: rgb(4, 4, 83);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5), -2px -2px 4px rgba(255,255,255,0.5);
   }
   
   .p {
-    padding: 0 1rem;
+    padding: 0 10% -2% 10%;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5), -2px -2px 4px rgba(255,255,255,0.5);
     font-size: 16px;
     font-weight: 300;
+
+  }
+
+  @media only screen and (max-width: 600px) {
+    /* Estilos para pantallas más pequeñas */
+    .label {
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5), -2px -2px 4px rgba(255,255,255,0.5);    
+      margin-top: 10px;
+
+    }
+     
+    .p {
+      padding: 0 10% -2% 10%;
+      /* Estilos para .p en pantallas más pequeñas */
+    }
   }

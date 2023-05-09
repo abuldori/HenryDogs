@@ -13,38 +13,40 @@
 .selec {
     padding: 10 16px;
     margin-top: 10;
-    border:#61b4b3;
-    border-radius: 2px;
-    background-color: #018786;
+    border: none;
+    border-radius: 5rem;
+    background: linear-gradient(to right, rgb(45, 45, 212), rgb(229, 69, 96));
     box-shadow: 0 2px 1px -2px rgba(0, 0, 0, 0.2),
       0 2px 2px 0 rgba(0, 0, 0, 0.14),
       0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    color: #fff;
+    color: #f6f0f0;
     transition: background-color 15ms linear,
       box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
-  
+    text-align: center;
     height: 36px;
     line-height: 2.25rem;
-    font-family: Roboto, sans-serif;
-    font-size: 0.875rem;
-    font-weight: 500;
+    font-family: cursive, sans-serif;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+ 
   }
   
-  .selec:hover, .btn-material:focus {
+  .selec:hover {
     box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.2),
       0 4px 5px 0 rgba(0, 0, 0, 0.14),
       0 1px 10px 0 rgba(0, 0, 0, 0.12);
-    background-color: #159090;
+      background: linear-gradient(to right, rgb(229, 69, 96),  rgb(45, 45, 212));
+      
   }
-  
-  .selec:active {
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-    0 8px 10px 1px rgba(0, 0, 0, 0.14),
-    0 3px 14px 2px rgba(0, 0, 0, 0.12);
-    background-color: #61b4b3;
-  }
+
+ .value1{
+  background-color: #ee5c99;
+ }
+
+ .value2{
+  background-color: rgb(45, 45, 212);
+ }
+
 
   @media (max-width: 767px) {
     .selec {
@@ -59,37 +61,42 @@
 
   .conteinerNav{
     display: flex;
+    width: 25%;
+    margin-top: -7%;
+    margin-bottom: -10%;
     justify-content: center;
-    margin-left: 1px;
-    margin-right: 1px;
     background-position: center;
-    padding: 2% 10% 2%;
-    border-radius: 20px;
+    padding: 25% 1px 1px 1px; 
     background-repeat: no-repeat;
-    background-image: url("https://img.freepik.com/vector-gratis/fondo-colorido-modelo-huellas-pata-perro-o-gato_1017-30662.jpg");
+    transform:translatex(0px) translatey(-73px);
+    background-image: url("../../assets/cartel.png");
+   
   }
 
   @media (max-width: 767px) {
     .conteinerNav {
-      padding: 10% 10% 10%;
+      padding: 100% 2% 2% 2%;
+      margin-top: -20%;
+      margin-bottom: -25%;
+      width:468px;
       justify-content: center;
-      border-radius: 15px;
       background-repeat: no-repeat;
-      background-image: url("https://img.freepik.com/vector-gratis/fondo-colorido-modelo-huellas-pata-perro-o-gato_1017-30662.jpg");
+      transform:translatex(0px) translatey(-62px);
+      background-image: url("../../assets/cartel.png");
     }
   }
 
   .nav{
   text-decoration: none;
-  padding: 0 15px;
-  display: inline-block;
   transform: scale(1);
   color: #03103fb2;
   cursor: pointer;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 22px;
+  margin: -35% 10% 22% 10%;
   text-shadow: 0 0 .2rem rgba(10, 3, 49, 0.461), 0 0 .1rem rgba(151, 90, 230, 0.461), 0 0 .8rem rgba(0, 0, 0, 0.461);
   transition: text-shadow 0.2s ease-in-out;
+  
 }
 
 .nav:hover {
@@ -101,7 +108,8 @@
   
   @media (max-width: 767px) {
     .nav {
-      font-size: 30px;
+      font-size: 25px;
+      margin: -52% 10% 22% 10%;
     }
   }
 
@@ -138,33 +146,17 @@
 
 
 
-.h1 {
-  padding: 0% 30% ;
-  text-shadow: 3px 3px 1px rgb(1, 5, 8);
-  color: rgb(119, 146, 236);
-  font-family: 'Montserrat', sans-serif;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 5%;
-  margin-top: 2%;
-  font-size: 50px;
-  text-align: center;
- 
-}
-.dog-animation {
-  display:inline-block;
-  animation: dog 2s infinite;
-}
-
-@keyframes dog {
-  0% {
-    transform: translateX(0);
+  .h1 {
+    margin: 2rem 5rem 3rem 7rem;
+    text-shadow: 3px 3px 1px rgb(1, 5, 8);
+    color: rgb(119, 146, 236);
+    font-family: cursive;
+    text-align: center;
+    font-size: 50px;
+    animation: titulo-animacion 3s ease-in-out infinite;
   }
-  50% {
-    transform: translateX(20px) rotateZ(-10deg);
+  @keyframes titulo-animacion {
+    0% { transform: rotate(0deg); }
+    40% { transform: rotate(8deg); }
+    100% { transform: rotate(0deg); }
   }
-  100% {
-    transform: translateX(0);
-  }
-}
-

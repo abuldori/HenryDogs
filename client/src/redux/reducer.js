@@ -12,6 +12,7 @@ import {
     DELETE_DOG
 } from "./actionTypes";
 
+
 const inicialState = {
     dogs: [],
     dogsDetail: {},
@@ -85,18 +86,21 @@ const reducer = ( state = inicialState, action ) => {
                 ...state,
                 dogs: sortedByName
             };
-        case ORDER_WEIGHT:
-            let OrderByWeight = state.allDogs;
-            if ( action.payload === "asc" ) {
-                OrderByWeight.sort( ( a, b ) => parseInt( a.weight ) - parseInt( b.weight ) );
-            } else {
-                OrderByWeight.sort( ( a, b ) => parseInt( b.weight ) - parseInt( a.weight ) );
-            }
-
+            case ORDER_WEIGHT:
+                let OrderByWeight = state.allDogs;
+                if ( action.payload === "asc" ) {
+                    OrderByWeight.sort( ( a, b ) => parseInt( a.weight ) - parseInt( b.weight ) );
+                } else {
+                    OrderByWeight.sort( ( a, b ) => parseInt( b.weight ) - parseInt( a.weight ) );
+                }
             return {
                 ...state,
                 allDogs: OrderByWeight
             }
+
+
+              
+              
         case SEARCH_RACE:
             return {
                 ...state,

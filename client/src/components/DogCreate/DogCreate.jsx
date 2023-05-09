@@ -57,7 +57,7 @@ const DogCreate = () => {
           life_span: [],
           temperaments: [],
         });
-        //history.push("/home"); // se puede hacer o no! redirige al usuario para ver al personaje creado
+        history.push("/home"); // se puede hacer o no! redirige al usuario para ver al personaje creado
       };
       
       const handleSelect = (e) => {
@@ -81,7 +81,6 @@ const DogCreate = () => {
       }, [dispatch]);
       
 
-      
       return (
         <div className={style.container}>
       <Link to="/home">

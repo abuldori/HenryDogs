@@ -1,75 +1,91 @@
 .containerlanding {
- padding: 15% 30px 50px 50px;
+ padding: 5% 20px 40px 40px;
  background-size: cover;
- background-position: center center;
- background-image: url("https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=600");
+ flex-direction: column;
+ 
 }
 
-
-
-.containerApp {
+.containeraAp {
   display: flex;
-  margin-top: 20px;
-  background-color: transparent;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.title{
+  font-size: 50px;
+  margin: 30px 50px 50px 50px;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  color: #f5efef;
+  background-color: #ed930e95;
+  box-shadow: 5px 5px 5px #888888;
   text-align: center;
-  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
 }
 
-.containerAp {
+.gifDiv {
+  flex: 1 1 1 50%;
   display: flex;
-  background-color: transparent;
-  margin-top: 20%;
-  border-radius: 10px;
-  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  margin: 0 10px 10px 20px 20px;
+  margin-top: 0;
+
+  width: 650px;
+  height: 450px;
 }
 
-.h1 {
-  color: #220404;
-  font-size: 48px;
+.content {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  margin-right: 20px;
+}
+
+
+.conteinerbtn {
+  text-align: center;
+  font-size: 10px;
+}
+
+.button {
+  border-color: transparent;
+  border: none;
+}
+.button a {
+  background-color: #f99843;
+  color: #fff;
+  padding: 20px 50px;
+  border-radius: 30px;
+  font-size: 24px;
   font-weight: bold;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 0px #a39595;
+  transition: all 0.3s ease;
+
 }
 
-.btn {
-  background-image: linear-gradient(to bottom right, #e74cdc, #4d13c0);
-  border: none; /* quitar borde */
-  border-radius: 4px; /* redondear esquinas */
-  color: #fff; /* color del texto */
-  cursor: pointer; /* mostrar cursor al pasar el mouse */
-  font-size: 16px; /* tamaño del texto */
-  padding: 10px 30px 10px; /* espacio alrededor del texto */
-  transition: all 0.3s ease; /* transición suave al pasar el mouse */
-  width: 60%;
+.button a:hover {
+  background-color: #e44f10;
+ 
 }
-
-.btn:hover {
-  background-image: linear-gradient(to bottom right, #255c97, #3e48a1);
-}
-
   @media (max-width: 767px) {
     .containerlanding {
       font-size: 20px;
       margin: 0%;
-
-      padding: 35% 20px 100px 20px;
+      padding: 3% 20px 10% auto;
     }
-    .h1 {
+    .title {
       font-size: 40px;
-      margin: 5% 10%;
+      margin: 0% 20% 40% 10%;
+    
     }
-    .h3 {
-      font-size: 20px;
-      margin: 10% 5%;
+  
+    .button {
+      width: 10%;
+      border: none;
+      
     }
-    .btn {
-      width: 80%;
-    }
-  }
- 
-  .traerperros{
-    text-shadow: 2px 2px 0 #280202;
-    color: #d7e6f6; /* color del enlace */
-    text-decoration: none; /* quitar subrayado */
-    transition: all 0.3s ease; /* transición suave al pasar el mouse */
   }

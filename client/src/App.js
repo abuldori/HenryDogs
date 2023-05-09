@@ -14,6 +14,7 @@ function App () {
           <Route exact path="/home" component={Home}></Route>
           <Route exact path="/detail/:id" component={DogDetail}></Route>
           <Route exact path="/dog" component={DogCreate}></Route>
+          
       </Switch>
   
   );
